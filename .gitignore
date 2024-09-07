@@ -1,4 +1,6 @@
 bins/
 temp/
 tests/*.out
+
+*.out
 compile.sh

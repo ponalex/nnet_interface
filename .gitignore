@@ -1,0 +1,4 @@
+bins/
+temp/
+tests/*.out
+compile.sh

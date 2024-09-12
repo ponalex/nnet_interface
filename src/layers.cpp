@@ -20,7 +20,7 @@ template <class VSize> std::ostream& operator<<(std::ostream& stream, const FCNe
 
 template <class VSize> 
 arma::Mat<VSize> FCNetwork<VSize>::forward(arma::Mat<VSize>& input){
-    dot_prod = weights * input;
+    dot_prod = input * weights ;
     switch (func){
         case ActivationFunc::Linear:
             break;

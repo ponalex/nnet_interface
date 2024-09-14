@@ -73,7 +73,7 @@ void FCNetwork<VSize>::train(
             break;
         default:break;
     }
-    grad = -1.0 * input.t() * grad ;
+    grad = input.t() * grad ;
     trainer.change_weights(grad, weights);
 }
 

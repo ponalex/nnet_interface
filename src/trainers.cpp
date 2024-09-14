@@ -16,7 +16,7 @@ VSize Trainer<VSize>::change_weights( arma::Mat<VSize> &grad,
     auto lambda = coefficients[1];
     switch (method){
         case MethodOpts::SGD:
-            weights = weights - alpha*(grad + lambda *weights );
+            weights = weights - alpha*( grad + 2 * lambda *weights) ;
             break;
         case MethodOpts::Momentum:
             break;

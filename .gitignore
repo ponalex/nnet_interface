@@ -1,7 +1,5 @@
-bins/
-temp/
+docs/*.txt
 tests/*.out
 
 *.out
 compile.sh
-Makefile

@@ -1,6 +1,0 @@
-Токены которые игнорируются:
-    $<name> $   -   Code
-    #       #   -   link
-    ~       ~   -   
-    @       @   -   English
-    &       &   -   Ignore data

@@ -1,5 +1,6 @@
 docs/*.txt
 tests/*.out
+texts/*.hide
 
 *.out
 compile.sh

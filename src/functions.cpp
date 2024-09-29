@@ -10,6 +10,15 @@ template<typename VSize> arma::Mat<VSize> diff_sigmoid(arma::Mat<VSize>& input){
     return result/(1.0 + arma::exp(-1*input));
 }
 //  ********************************************************
+template<typename VSize> arma::Mat<VSize> tanh(arma::Mat<VSize>& input){
+    arma::Mat<VSize> result = (arma::exp(input) - arma::exp(-1*input)) / (arma::exp(input) + arma::exp(-1*input));
+    return result;
+}
+template<typename VSize> arma::Mat<VSize> diff_tanh(arma::Mat<VSize>& input){
+    arma::Mat<VSize> result = ( arma::exp(input) + arma::exp(-1*input)) * ( arma::exp(input) + arma::exp(-1*input));
+    return 4 * result * arma::exp(input) * arma::exp(-1*input);
+}
+//  ********************************************************
 template<typename VSize> arma::Mat<VSize> softplus(arma::Mat<VSize>& input){
     arma::Mat<VSize> result =arma::log( 1.0 + arma::exp(input));
     return result;

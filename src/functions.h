@@ -4,6 +4,7 @@
 
 enum ActivationFunc {
     Sigmoid,
+    Tanh,
     Softplus,
     Linear,
     Maximum,

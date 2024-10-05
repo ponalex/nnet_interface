@@ -22,6 +22,8 @@ main: main.cpp
 $(TEST_PREFIX)%: $(TEST_PREFIX)%.cpp
 	$(CC) -o $(@).out $< $(SOURCE) -g $(LIBS) $(CFLAGS)
 
+conf: main.cpp src/options.h src/options.cpp
+	$(CC) -o main.out $^ $(CFLAGS)
 
 clean:
 	rm -f *.so main test_*.out
